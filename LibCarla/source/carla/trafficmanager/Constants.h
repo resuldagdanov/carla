@@ -91,7 +91,7 @@ static const float INV_GROWTH_STEP_SIZE = 1.0f / static_cast<float>(GROWTH_STEP_
 namespace Map {
 static const float INFINITE_DISTANCE = std::numeric_limits<float>::max();
 static const float MAX_GEODESIC_GRID_LENGTH = 20.0f;
-static const float MAP_RESOLUTION = 5.0f;
+static const float MAP_RESOLUTION = 0.1f;
 static const float INV_MAP_RESOLUTION = 1.0f / MAP_RESOLUTION;
 static const double MAX_WPT_DISTANCE = MAP_RESOLUTION/2.0 + SQUARE(MAP_RESOLUTION);
 static const float MAX_WPT_RADIANS = 0.1745f;  // 10º
@@ -134,7 +134,7 @@ static const float DT = 0.05f;
 static const float INV_DT = 1.0f / DT;
 static const std::vector<float> LONGITUDIAL_PARAM = {12.0f, 0.05f, 0.02f};
 static const std::vector<float> LONGITUDIAL_HIGHWAY_PARAM = {20.0f, 0.05f, 0.01f};
-static const std::vector<float> LATERAL_PARAM = {5.0f, 0.02f, 0.8f};
+static const std::vector<float> LATERAL_PARAM = {5.0f, 0.01f, 0.05f};
 static const std::vector<float> LATERAL_HIGHWAY_PARAM = {3.0f, 0.02f, 0.4f};
 } // namespace PID
 
