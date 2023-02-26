@@ -16,14 +16,14 @@ help:
 import: server
 	@"${CARLA_BUILD_TOOLS_FOLDER}/Import.py" $(ARGS)
 
-CarlaUE4Editor: LibCarla
+CarlaUE4Editor: LibCarla osm2odr
 	@"${CARLA_BUILD_TOOLS_FOLDER}/BuildCarlaUE4.bat" --build $(ARGS)
 
 launch: CarlaUE4Editor
 	@"${CARLA_BUILD_TOOLS_FOLDER}/BuildCarlaUE4.bat" --launch $(ARGS)
 
 launch-only:
-	@"${CARLA_BUILD_TOOLS_FOLDER}/BuildCarlaUE4.bat" --launch
+	@"${CARLA_BUILD_TOOLS_FOLDER}/BuildCarlaUE4.bat" --launch $(ARGS)
 
 package: PythonAPI
 	@"${CARLA_BUILD_TOOLS_FOLDER}/Package.bat" --ue-version 4.26 $(ARGS)
